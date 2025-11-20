@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untukmu yang Spesial</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fce4ec;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 1s ease;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .modal-content h2 {
+      color: #e91e63;
+    }
+
+    .close-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #d81b60;
+    }
+
+    /* Background hati */
+    .hati-bg {
+      background-image: url('https://i.imgur.com/yxhmaJN.png'); /* Gambar hati transparan */
+      background-size: 300px;
+      background-repeat: repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="popup" class="modal">
+    <div class="modal-content">
+      <h2>Hai chua 💖</h2>
+      <p>waktu pertama kali kito chatan, aku idk berniat utk jtuh cinta "i just want to be friend" tapi waktu itu chua keliatan baik dan lucu, sampai aku ngeraso "i think she opened my heart" dan tanpa chua sadari "aku cknyo suko smo chua"<3 </p>
+      <p>chua tau pas aku hilang tanpa kabar? aku sebenernyo ngasi chua waktu, buat istirahat sejenak jadi masalah chua hari itu, aku balek lagi chat chua karno aku ngeraso chua lah selesai dengan masalah nyo itu ^^</p>
+      <button class="close-btn" onclick="tutupPopup()">chua biso bales di wa 😳</button>
+    </div>
+  </div>
+  
+
+  <script>
+    window.onload = function() {
+      document.getElementById("popup").style.display = "block";
+    };
+
+    function tutupPopup() {
+      document.getElementById("popup").style.display = "none";
+      document.body.classList.add("hati-bg");
+    }
+  </script>
+
+</body>
+</html>
